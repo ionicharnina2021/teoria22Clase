@@ -16,4 +16,7 @@ export class Persona{
     public toString():string{
         return this.nombre+" "+this.edad;
     }
+    public equals(other:Persona):boolean{
+        return this._nombre===other.nombre&&this._edad==other.edad;
+    }
 }
