@@ -1,0 +1,37 @@
+<label>campo</label>
+<div>
+  <input type=text value="valor por defecto">
+</div>
+<!-- acceder al valor de una varaible en vez de 
+a un literal se consigue con [] -->
+<label>campo Dos</label>
+<div>
+  <input type=text [ngModel]="pista" (ngModelChange)="change($event)">
+</div>
+<label>campo Dos</label>
+<div>
+  <input type=text [ngModel]="pista" (ngModelChange)="change($event)">
+</div>
+<label>campo Tres</label>
+<div>
+  <input type=text [ngModel]="pista" (ngModelChange)="pista=$event">
+</div>
+<div>
+  <label>{{pista}}</label>
+</div>
+<br>
+<div>
+  <!-- <input type="button" value="aprietame" (click)='change()'> -->
+</div>
+<br>
+<div>
+  <input type="button" [value]="boton">
+</div>
+<!-- probamos el banana in a box -->
+<h3 >Otra cosa</h3>
+<br>
+<div>
+  <input type="text" [(ngModel)]="banana">
+</div>
+<br>
+<label>{{banana}}</label>
