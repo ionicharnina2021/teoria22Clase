@@ -10,5 +10,8 @@
     <a (click)="gotoQueryComponent()">Pasar Objeto</a>
     <br>
     <label>Seccion moviles</label><br>
+    <!-- Hemos hecho esto psando por RouterLink una varaible-->
     <input type="text" [(ngModel)]="marca"><br>
-    <button (click)="cargaMoviles()">Listar Moviles</button>
+    <a [routerLink]="['/moviles',marca]">ver lista</a>
+    <!-- <input type="text" [(ngModel)]="marca"><br>
+    <button (click)="cargaMoviles()">Listar Moviles</button> -->

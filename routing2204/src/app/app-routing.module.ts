@@ -15,7 +15,7 @@ const routes: Routes = [
   {path:'pasarvalor/:valor',component:PasarValorComponent},
   {path:'pasarvalorDos/:uno/:otro',component:PasandoDosComponent},
   {path:'queryParams',component:PasarObjetoComponent},
-  {path:'moviles',component:MovilesComponent}
+  {path:'moviles/:marca',component:MovilesComponent}
 ];
 
 @NgModule({

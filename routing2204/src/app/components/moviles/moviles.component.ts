@@ -13,8 +13,10 @@ export class MovilesComponent implements OnInit {
 
   marca!:string;
   ngOnInit(): void {
-    this.marca=this.route.snapshot.queryParams['marca'];
-    console.log("los moviles son: "+this.movilesService.getByMarca(this.marca) )
+    this.marca=this.route.snapshot.params['marca'];
+    console.log(this.getMovils())
+    // this.marca=this.route.snapshot.queryParams['marca'];
+    // console.log("los moviles son: "+this.movilesService.getByMarca(this.marca) )
   }
 
   getMovils(){
