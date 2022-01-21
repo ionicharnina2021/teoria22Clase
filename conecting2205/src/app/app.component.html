@@ -1,0 +1,8 @@
+<body>
+
+  <button (click)="getStudents()">Ver Estudiantes</button>
+  <label *ngIf="visible()" >Esperando</label>
+  <div *ngIf="lista" >
+    <h3>{{lista|json}}</h3>
+  </div>
+</body>

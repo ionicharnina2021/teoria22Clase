@@ -11,6 +11,7 @@ import { PasandoDosComponent } from './components/pasando-dos/pasando-dos.compon
 import { PasarObjetoComponent } from './components/pasar-objeto/pasar-objeto.component';
 import { MovilesComponent } from './components/moviles/moviles.component';
 import { FormsModule } from '@angular/forms';
+import { MobileDetailComponent } from './components/mobile-detail/mobile-detail.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     PasarValorComponent,
     PasandoDosComponent,
     PasarObjetoComponent,
-    MovilesComponent
+    MovilesComponent,
+    MobileDetailComponent
   ],
   imports: [
     BrowserModule,

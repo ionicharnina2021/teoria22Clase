@@ -1,3 +1,4 @@
+import { ValorService } from './../../services/valor.service';
 import { MovilService } from './../../services/movil.service';
 import { Persona } from './../../core/model/persona';
 import { Component, OnInit } from '@angular/core';
@@ -10,7 +11,11 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   marca!: string;
-  constructor(private route: Router, private movilService: MovilService) {}
+  constructor(
+    private route: Router,
+    private movilService: MovilService,
+    private valorService: ValorService
+  ) {}
 
   ngOnInit(): void {}
 
@@ -29,4 +34,11 @@ export class HomeComponent implements OnInit {
       },
     });
   }
+
+  public valor=0;
+  public incrementValue() {
+    this.valorService.incValue();
+    this.valor=this.valorService.valor;
+  }
+ 
 }

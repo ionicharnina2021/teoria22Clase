@@ -6,10 +6,10 @@ import { Injectable } from '@angular/core';
 })
 export class MovilService {
   private _moviles = Array.of(
-    new Movil('MI 9', 'depende del dia'),
-    new Movil('Huawei c20', 'que yo que se'),
-    new Movil('Huawei p10', 'me ha salido muy bueno'),
-    new Movil('Redmi note 8', 'es barato')
+    new Movil('MI 9', 'depende del dia',true),
+    new Movil('Huawei c20', 'que yo que se',true),
+    new Movil('Huawei p10', 'me ha salido muy bueno',true),
+    new Movil('Redmi note 8', 'es barato',true)
   );
   constructor() {
     console.log('creando el servicio de moviles');

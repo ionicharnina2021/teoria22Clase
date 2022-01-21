@@ -7,6 +7,7 @@ import { UnoComponent } from './components/uno/uno.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
+import { MobileDetailComponent } from './components/mobile-detail/mobile-detail.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -15,7 +16,9 @@ const routes: Routes = [
   {path:'pasarvalor/:valor',component:PasarValorComponent},
   {path:'pasarvalorDos/:uno/:otro',component:PasandoDosComponent},
   {path:'queryParams',component:PasarObjetoComponent},
-  {path:'moviles/:marca',component:MovilesComponent}
+  {path:'moviles/:marca',component:MovilesComponent},
+  {path:'RouterProgramatico',component:RouterProgramaticoComponent},
+  // {path:'MobileDetail',component:MobileDetailComponent}
 ];
 
 @NgModule({
