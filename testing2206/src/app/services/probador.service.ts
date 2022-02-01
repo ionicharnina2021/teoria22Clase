@@ -4,8 +4,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ProbadorService {
-
   valor = 0;
+  
   constructor() {
     console.log('Hello ProbadorProvider Provider');
   }

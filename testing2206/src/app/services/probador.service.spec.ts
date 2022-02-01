@@ -1,5 +1,4 @@
 import { TestBed } from '@angular/core/testing';
-
 import { ProbadorService } from './probador.service';
 
 describe('ProbadorService', () => {

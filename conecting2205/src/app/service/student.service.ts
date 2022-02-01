@@ -1,3 +1,4 @@
+import { CustomResponse } from './../interface/custom-response';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Student } from '../interface/student';
@@ -8,7 +9,15 @@ import { Student } from '../interface/student';
 export class StudentService {
   private readonly apiUrl = 'http://localhost:8080';
   constructor(protected http: HttpClient) {}
-async getStudents() {
+
+  async getPersonas() {
+    let persons;
+    await this.http
+      .get<CustomResponse>(this.apiUrl + '/personal/personas')
+      .forEach((personas) => (persons = personas.data.personas));
+  }
+
+  async getStudents() {
     let lista: any;
     console.log('hola aqui empezando el metodo');
     await this.http.get(this.apiUrl + '/students/list').forEach((stud) => {

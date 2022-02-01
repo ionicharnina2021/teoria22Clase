@@ -1,20 +1,20 @@
+import { CalculadoraService } from './services/calculadora.service';
+import { UsacalculadoraService } from './services/usacalculadora.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NadaComponent } from './nada/nada.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NadaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [CalculadoraService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
