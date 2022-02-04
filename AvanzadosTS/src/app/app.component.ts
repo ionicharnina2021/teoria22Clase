@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PromisesService } from './servicios/promises.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AvanzadosTS';
+  constructor(public prom:PromisesService){
+    prom.haz();
+    prom.hazDos();
+  }
 }
