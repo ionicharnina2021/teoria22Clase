@@ -1,0 +1,4 @@
+<p>personal works!</p>
+<div *ngIf="(lista$|async) as lista"  >
+    <h3 *ngFor="let item of lista" >{{item}}</h3>
+</div>

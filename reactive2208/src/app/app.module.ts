@@ -1,14 +1,13 @@
+import { PersonalComponent } from './../../../reactive2207/src/app/componentes/personal/personal.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PersonalComponent } from './componentes/personal/personal.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    PersonalComponent
+    AppComponent,PersonalComponent
   ],
   imports: [
     BrowserModule,
