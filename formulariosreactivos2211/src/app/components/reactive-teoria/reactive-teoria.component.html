@@ -1,0 +1,7 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="profileForm">
+    <label for="name">Name: </label> 
+    <input id="name" type="text" formControlName="name">   
+    <label for="otro">Otro: </label> 
+    <input id="otro" type="text" formControlName="otro">   
+    <button type="submit"> Enviar </button>
+</form>

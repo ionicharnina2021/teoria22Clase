@@ -1,0 +1,13 @@
+<form (ngSubmit)="onSubmit()" >
+    <div *ngFor="let item of validators.inputForm" >
+        <label>{{item.name}}</label>
+        <div>
+            <input [type]="item.type" [placeholder]="item.placeholder" [name]="item.name" >
+            <span *ngIf="item.validator" >{{item.errorMessage}}</span>
+        </div>
+    </div>
+        <div>
+        <br>
+        <button type="submit">Enviar</button>
+    </div>
+</form>
