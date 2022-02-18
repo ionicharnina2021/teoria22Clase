@@ -12,21 +12,18 @@ export class ArticleValidator {
           name: this.value.nombre,
           type: 'text',
           placeholder: 'nombre del produto',
-          validator: false,
           errorMessage: 'nombre erroneo',
         },
         {
           name: this.value.precio.toString() ,
           type: 'number',
           placeholder: 'precio del produto',
-          validator: false,
           errorMessage: 'valor no valido',
         },
         {
           name: this.value.existencias.toString(),
           type: 'number',
           placeholder: 'existencias',
-          validator: false,
           errorMessage: 'cantidad no correcta',
         },
       ];
