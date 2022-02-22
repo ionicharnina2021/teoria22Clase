@@ -1,6 +1,7 @@
 <div *ngIf="myStudents$ | async as students">
-    <!-- <tbody *ngFor="let student of students.data.students">
+    <tbody *ngFor="let student of students.data.students">
         <td>{{ student.id }}</td>
       <td>{{ student.name }}</td>
-    </tbody> -->
+    </tbody> 
 </div>
+<button (click)="getStudents()">Cargar</button>

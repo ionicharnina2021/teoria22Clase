@@ -1,3 +1,5 @@
+import { CustomResponse } from './../../core/model/custom-response';
+import { UserAuthenticationService } from './../../services/user-authentication.service';
 import { StudentAsyncService } from './../../services/student-async.service';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -8,15 +10,20 @@ import { Observable } from 'rxjs';
   styleUrls: ['./students-async.component.css']
 })
 export class StudentsAsyncComponent implements OnInit {
-  myStudents$!: Observable<Response>;
-  constructor(private studentServiceAsync:StudentAsyncService) { }
+  myStudents$!: Observable<CustomResponse>;
+  constructor(private userAuthenticationService:UserAuthenticationService,private studentServiceAsync:StudentAsyncService) {
+    userAuthenticationService.authenticate("jose","321");
+    
+   }
 
   ngOnInit(): void {
     // this.getStudents();
 
   }
   getStudents(){
-    this.myStudents$=this.studentServiceAsync.students$;
+    if(this.userAuthenticationService.accessGranted){
+      this.myStudents$=this.studentServiceAsync.students$(this.userAuthenticationService.accessToken);
+    }
   }
 
 }
