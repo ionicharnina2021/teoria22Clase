@@ -13,7 +13,12 @@ export class PasarObjetoComponent implements OnInit {
 
   public persona!: Persona;
   ngOnInit(): void {
-    this.persona=this.route.snapshot.queryParams['person'];
+    // Hay que hacer un JSON.parse porque se envia desde el remitente con un JSON.stringify
+    // aun así, se convierte en object. Para convertirlo en tipo Persona hay que usar asssign
+    // y por lo tanto es necesario tener un constructor vacio en el tipo (usamos ? en las propiedades)
+    this.persona=Object.assign(new Persona(),JSON.parse(this.route.snapshot.queryParams['person']))
+    // this.persona=<Persona>JSON.parse(this.route.snapshot.queryParams['person']);
+    console.log(this.persona.$name)
   }
 
 }

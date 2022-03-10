@@ -8,7 +8,10 @@ import { CustomResponse } from '../core/model/custom-response';
 })
 export class StudentAsyncService {
   private readonly apiUrl = 'http://localhost:8080';
-  constructor(protected http: HttpClient) {}
+  constructor(protected http: HttpClient) {
+    let loc:Observable<CustomResponse>=new Observable;
+    loc.subscribe({next:()=>{},error:()=>{}});
+  }
 
   public students$(access_token: string): Observable<CustomResponse> {
     let options = {

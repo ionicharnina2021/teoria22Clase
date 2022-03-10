@@ -23,8 +23,9 @@ export class HomeComponent implements OnInit {
     this.route.navigate(['routerpro']);
   }
   gotoQueryComponent() {
+    let per=new Persona('Juan Luis', 31);
     this.route.navigate(['queryParams'], {
-      queryParams: { person: new Persona('Juan Luis', 31) },
+      queryParams: { person: JSON.stringify(per) },
     });
   }
   cargaMoviles() {

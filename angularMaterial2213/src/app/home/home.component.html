@@ -1,0 +1,23 @@
+<p>home works!</p>
+<mat-card>
+  <mat-card-header> Algo en la cebecera </mat-card-header>
+  <mat-card-content>
+    <div>
+      <h3>{{ value }}</h3>
+    </div>
+    <div>
+      <mat-slider
+        [max]="max"
+        [min]="min"
+        [step]="step"
+        [thumbLabel]="thumbLabel"
+        [(ngModel)]="value"
+        (valueChange)="changeValue($event)"
+      ></mat-slider>
+      <!-- ngmodel es una conexion sincrona y valuechage es asincrona -->
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<h3>{{ other }}</h3>
+<a routerLink='/formulario'>Formulario</a>
